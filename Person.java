@@ -2,7 +2,7 @@ public class Person {
 	private String name;
 	private Person nextPerson;
 	
-	Public Person(String name) {
+	public Person(String name) {
 		this.name = name;
 		this.nextPerson=null;
 	}
