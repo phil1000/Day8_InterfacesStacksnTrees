@@ -8,6 +8,7 @@ public class Supermarket {
 	public void testQueue(PersonQueue inQueue) {
 		for (int i=0; i<10; i++) {
 			Person newPerson = new Person("Customer" + i);
+			System.out.println("Customer " + newPerson.getName() + " added");
 			inQueue.insertPerson(newPerson);
 		}
 		
@@ -21,16 +22,6 @@ public class Supermarket {
 		
 		System.out.println("Number of customers is " + inQueue.getSize());
 	}
-	
-	/* 	don't understand how you would use these methods i.e. how do you link to the actual supermarketQ 
-		within the method ?????
-		public void addPerson(Person newPerson) {
-		mySuperQueue.insertPerson(newPerson); 
-	}	
-	
-	public Person servePerson() {
-		return mySuperQueue.retrieve();
-	} */
 	
 	public static void main(String[] args) {
 		Supermarket mySP = new Supermarket();

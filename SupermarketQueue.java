@@ -8,10 +8,13 @@ public class SupermarketQueue implements PersonQueue {
 	}
 	
 	public void insertPerson(Person person) {
-		if (head!=null) {
-			person.setNext(head);
+		if (head==null) {
+			head=person;
 		}
-		head=person; // the new person has now been added to the head of the queue 
+		else {
+			tail.setNext(person);
+		}
+		tail=person; // the new person has now been added to the head of the queue 
 	}
 	
 	public Person retrieve() {
